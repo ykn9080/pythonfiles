@@ -1,0 +1,315 @@
+16:11:16,677 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+16:11:16,677 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+16:11:16,677 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/home/yknam/cmak-3.0.0.7/conf/logback.xml]
+16:11:16,715 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+16:11:16,715 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+16:11:16,720 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILE]
+16:11:16,724 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+16:11:16,740 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@332699949 - setting totalSizeCap to 5 GB
+16:11:16,741 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@332699949 - No compression will be used
+16:11:16,742 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@332699949 - Will use the pattern application.home_IS_UNDEFINED/logs/application.%d{yyyy-MM-dd}.log for the active file
+16:11:16,744 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern 'application.home_IS_UNDEFINED/logs/application.%d{yyyy-MM-dd}.log'.
+16:11:16,744 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
+16:11:16,751 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to Mon Sep 11 16:11:16 KST 2023
+16:11:16,753 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: application.home_IS_UNDEFINED/logs/application.log
+16:11:16,753 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [application.home_IS_UNDEFINED/logs/application.log]
+16:11:16,753 |-ERROR in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Failed to create parent directories for [/home/yknam/cmak-3.0.0.7/application.home_IS_UNDEFINED/logs/application.log]
+16:11:16,753 |-ERROR in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - openFile(application.home_IS_UNDEFINED/logs/application.log,true) call failed. java.io.FileNotFoundException: application.home_IS_UNDEFINED/logs/application.log (그런 파일이나 디렉터리가 없습니다)
+	at java.io.FileNotFoundException: application.home_IS_UNDEFINED/logs/application.log (그런 파일이나 디렉터리가 없습니다)
+	at 	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at 	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at 	at ch.qos.logback.core.recovery.ResilientFileOutputStream.<init>(ResilientFileOutputStream.java:26)
+	at 	at ch.qos.logback.core.FileAppender.openFile(FileAppender.java:204)
+	at 	at ch.qos.logback.core.FileAppender.start(FileAppender.java:127)
+	at 	at ch.qos.logback.core.rolling.RollingFileAppender.start(RollingFileAppender.java:100)
+	at 	at ch.qos.logback.core.joran.action.AppenderAction.end(AppenderAction.java:90)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.callEndAction(Interpreter.java:309)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.endElement(Interpreter.java:193)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.endElement(Interpreter.java:179)
+	at 	at ch.qos.logback.core.joran.spi.EventPlayer.play(EventPlayer.java:62)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:165)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:152)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:110)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:53)
+	at 	at ch.qos.logback.classic.util.ContextInitializer.configureByResource(ContextInitializer.java:75)
+	at 	at ch.qos.logback.classic.util.ContextInitializer.autoConfig(ContextInitializer.java:150)
+	at 	at org.slf4j.impl.StaticLoggerBinder.init(StaticLoggerBinder.java:84)
+	at 	at org.slf4j.impl.StaticLoggerBinder.<clinit>(StaticLoggerBinder.java:55)
+	at 	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:150)
+	at 	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:124)
+	at 	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:412)
+	at 	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:357)
+	at 	at play.api.Logger$.<init>(Logger.scala:276)
+	at 	at play.api.Logger$.<clinit>(Logger.scala)
+	at 	at play.api.libs.logback.LogbackLoggerConfigurator.configure(LogbackLoggerConfigurator.scala:72)
+	at 	at loader.KafkaManagerLoader.$anonfun$load$1(KafkaManagerLoader.scala:27)
+	at 	at loader.KafkaManagerLoader.$anonfun$load$1$adapted(KafkaManagerLoader.scala:27)
+	at 	at scala.Option.foreach(Option.scala:407)
+	at 	at loader.KafkaManagerLoader.load(KafkaManagerLoader.scala:27)
+	at 	at play.core.server.ProdServerStart$.start(ProdServerStart.scala:51)
+	at 	at play.core.server.ProdServerStart$.main(ProdServerStart.scala:25)
+	at 	at play.core.server.ProdServerStart.main(ProdServerStart.scala)
+16:11:16,753 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+16:11:16,754 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+16:11:16,754 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+16:11:16,755 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.classic.AsyncAppender]
+16:11:16,756 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [ASYNCFILE]
+16:11:16,756 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE] to ch.qos.logback.classic.AsyncAppender[ASYNCFILE]
+16:11:16,756 |-INFO in ch.qos.logback.classic.AsyncAppender[ASYNCFILE] - Attaching appender named [FILE] to AsyncAppender.
+16:11:16,756 |-INFO in ch.qos.logback.classic.AsyncAppender[ASYNCFILE] - Setting discardingThreshold to 51
+16:11:16,756 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.classic.AsyncAppender]
+16:11:16,756 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [ASYNCSTDOUT]
+16:11:16,756 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to ch.qos.logback.classic.AsyncAppender[ASYNCSTDOUT]
+16:11:16,756 |-INFO in ch.qos.logback.classic.AsyncAppender[ASYNCSTDOUT] - Attaching appender named [STDOUT] to AsyncAppender.
+16:11:16,756 |-INFO in ch.qos.logback.classic.AsyncAppender[ASYNCSTDOUT] - Setting discardingThreshold to 51
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [play] to INFO
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [application] to INFO
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [kafka.manager] to INFO
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.avaje.ebean.config.PropertyMapLoader] to OFF
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.avaje.ebeaninternal.server.core.XmlConfigLoader] to OFF
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.avaje.ebeaninternal.server.lib.BackgroundThread] to OFF
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.gargoylesoftware.htmlunit.javascript] to OFF
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.apache.zookeeper] to INFO
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to WARN
+16:11:16,757 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [ASYNCFILE] to Logger[ROOT]
+16:11:16,757 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [ASYNCSTDOUT] to Logger[ROOT]
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@9573584 - Registering current configuration as safe fallback point
+
+16:11:16,677 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+16:11:16,677 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+16:11:16,677 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/home/yknam/cmak-3.0.0.7/conf/logback.xml]
+16:11:16,715 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+16:11:16,715 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+16:11:16,720 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILE]
+16:11:16,724 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+16:11:16,740 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@332699949 - setting totalSizeCap to 5 GB
+16:11:16,741 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@332699949 - No compression will be used
+16:11:16,742 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@332699949 - Will use the pattern application.home_IS_UNDEFINED/logs/application.%d{yyyy-MM-dd}.log for the active file
+16:11:16,744 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern 'application.home_IS_UNDEFINED/logs/application.%d{yyyy-MM-dd}.log'.
+16:11:16,744 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
+16:11:16,751 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to Mon Sep 11 16:11:16 KST 2023
+16:11:16,753 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: application.home_IS_UNDEFINED/logs/application.log
+16:11:16,753 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [application.home_IS_UNDEFINED/logs/application.log]
+16:11:16,753 |-ERROR in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Failed to create parent directories for [/home/yknam/cmak-3.0.0.7/application.home_IS_UNDEFINED/logs/application.log]
+16:11:16,753 |-ERROR in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - openFile(application.home_IS_UNDEFINED/logs/application.log,true) call failed. java.io.FileNotFoundException: application.home_IS_UNDEFINED/logs/application.log (그런 파일이나 디렉터리가 없습니다)
+	at java.io.FileNotFoundException: application.home_IS_UNDEFINED/logs/application.log (그런 파일이나 디렉터리가 없습니다)
+	at 	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at 	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at 	at ch.qos.logback.core.recovery.ResilientFileOutputStream.<init>(ResilientFileOutputStream.java:26)
+	at 	at ch.qos.logback.core.FileAppender.openFile(FileAppender.java:204)
+	at 	at ch.qos.logback.core.FileAppender.start(FileAppender.java:127)
+	at 	at ch.qos.logback.core.rolling.RollingFileAppender.start(RollingFileAppender.java:100)
+	at 	at ch.qos.logback.core.joran.action.AppenderAction.end(AppenderAction.java:90)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.callEndAction(Interpreter.java:309)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.endElement(Interpreter.java:193)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.endElement(Interpreter.java:179)
+	at 	at ch.qos.logback.core.joran.spi.EventPlayer.play(EventPlayer.java:62)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:165)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:152)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:110)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:53)
+	at 	at ch.qos.logback.classic.util.ContextInitializer.configureByResource(ContextInitializer.java:75)
+	at 	at ch.qos.logback.classic.util.ContextInitializer.autoConfig(ContextInitializer.java:150)
+	at 	at org.slf4j.impl.StaticLoggerBinder.init(StaticLoggerBinder.java:84)
+	at 	at org.slf4j.impl.StaticLoggerBinder.<clinit>(StaticLoggerBinder.java:55)
+	at 	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:150)
+	at 	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:124)
+	at 	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:412)
+	at 	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:357)
+	at 	at play.api.Logger$.<init>(Logger.scala:276)
+	at 	at play.api.Logger$.<clinit>(Logger.scala)
+	at 	at play.api.libs.logback.LogbackLoggerConfigurator.configure(LogbackLoggerConfigurator.scala:72)
+	at 	at loader.KafkaManagerLoader.$anonfun$load$1(KafkaManagerLoader.scala:27)
+	at 	at loader.KafkaManagerLoader.$anonfun$load$1$adapted(KafkaManagerLoader.scala:27)
+	at 	at scala.Option.foreach(Option.scala:407)
+	at 	at loader.KafkaManagerLoader.load(KafkaManagerLoader.scala:27)
+	at 	at play.core.server.ProdServerStart$.start(ProdServerStart.scala:51)
+	at 	at play.core.server.ProdServerStart$.main(ProdServerStart.scala:25)
+	at 	at play.core.server.ProdServerStart.main(ProdServerStart.scala)
+16:11:16,753 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+16:11:16,754 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+16:11:16,754 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+16:11:16,755 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.classic.AsyncAppender]
+16:11:16,756 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [ASYNCFILE]
+16:11:16,756 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE] to ch.qos.logback.classic.AsyncAppender[ASYNCFILE]
+16:11:16,756 |-INFO in ch.qos.logback.classic.AsyncAppender[ASYNCFILE] - Attaching appender named [FILE] to AsyncAppender.
+16:11:16,756 |-INFO in ch.qos.logback.classic.AsyncAppender[ASYNCFILE] - Setting discardingThreshold to 51
+16:11:16,756 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.classic.AsyncAppender]
+16:11:16,756 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [ASYNCSTDOUT]
+16:11:16,756 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to ch.qos.logback.classic.AsyncAppender[ASYNCSTDOUT]
+16:11:16,756 |-INFO in ch.qos.logback.classic.AsyncAppender[ASYNCSTDOUT] - Attaching appender named [STDOUT] to AsyncAppender.
+16:11:16,756 |-INFO in ch.qos.logback.classic.AsyncAppender[ASYNCSTDOUT] - Setting discardingThreshold to 51
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [play] to INFO
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [application] to INFO
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [kafka.manager] to INFO
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.avaje.ebean.config.PropertyMapLoader] to OFF
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.avaje.ebeaninternal.server.core.XmlConfigLoader] to OFF
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.avaje.ebeaninternal.server.lib.BackgroundThread] to OFF
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.gargoylesoftware.htmlunit.javascript] to OFF
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.apache.zookeeper] to INFO
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to WARN
+16:11:16,757 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [ASYNCFILE] to Logger[ROOT]
+16:11:16,757 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [ASYNCSTDOUT] to Logger[ROOT]
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+16:11:16,757 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@9573584 - Registering current configuration as safe fallback point
+16:11:16,771 |-INFO in ch.qos.logback.classic.AsyncAppender[ASYNCFILE] - Worker thread will flush remaining events before exiting. 
+16:11:16,772 |-INFO in ch.qos.logback.classic.AsyncAppender[ASYNCFILE] - Queue flush finished successfully within timeout.
+16:11:16,772 |-INFO in ch.qos.logback.classic.AsyncAppender[ASYNCSTDOUT] - Worker thread will flush remaining events before exiting. 
+16:11:16,773 |-INFO in ch.qos.logback.classic.AsyncAppender[ASYNCSTDOUT] - Queue flush finished successfully within timeout.
+16:11:16,776 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+16:11:16,776 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+16:11:16,776 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILE]
+16:11:16,776 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+16:11:16,777 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1424698224 - setting totalSizeCap to 5 GB
+16:11:16,777 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1424698224 - No compression will be used
+16:11:16,777 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1424698224 - Will use the pattern /home/yknam/cmak-3.0.0.7/logs/application.%d{yyyy-MM-dd}.log for the active file
+16:11:16,778 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern '/home/yknam/cmak-3.0.0.7/logs/application.%d{yyyy-MM-dd}.log'.
+16:11:16,778 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
+16:11:16,778 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to Mon Sep 11 15:54:17 KST 2023
+16:11:16,778 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: /home/yknam/cmak-3.0.0.7/logs/application.log
+16:11:16,778 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [/home/yknam/cmak-3.0.0.7/logs/application.log]
+16:11:16,778 |-ERROR in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - openFile(/home/yknam/cmak-3.0.0.7/logs/application.log,true) call failed. java.io.FileNotFoundException: /home/yknam/cmak-3.0.0.7/logs/application.log (허가 거부)
+	at java.io.FileNotFoundException: /home/yknam/cmak-3.0.0.7/logs/application.log (허가 거부)
+	at 	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at 	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at 	at ch.qos.logback.core.recovery.ResilientFileOutputStream.<init>(ResilientFileOutputStream.java:26)
+	at 	at ch.qos.logback.core.FileAppender.openFile(FileAppender.java:204)
+	at 	at ch.qos.logback.core.FileAppender.start(FileAppender.java:127)
+	at 	at ch.qos.logback.core.rolling.RollingFileAppender.start(RollingFileAppender.java:100)
+	at 	at ch.qos.logback.core.joran.action.AppenderAction.end(AppenderAction.java:90)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.callEndAction(Interpreter.java:309)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.endElement(Interpreter.java:193)
+	at 	at ch.qos.logback.core.joran.spi.Interpreter.endElement(Interpreter.java:179)
+	at 	at ch.qos.logback.core.joran.spi.EventPlayer.play(EventPlayer.java:62)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:165)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:152)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:110)
+	at 	at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:53)
+	at 	at ch.qos.logback.classic.util.ContextInitializer.configureByResource(ContextInitializer.java:75)
+	at 	at play.api.libs.logback.LogbackLoggerConfigurator.configure(LogbackLoggerConfigurator.scala:126)
+	at 	at play.api.libs.logback.LogbackLoggerConfigurator.configure(LogbackLoggerConfigurator.scala:74)
+	at 	at loader.KafkaManagerLoader.$anonfun$load$1(KafkaManagerLoader.scala:27)
+	at 	at loader.KafkaManagerLoader.$anonfun$load$1$adapted(KafkaManagerLoader.scala:27)
+	at 	at scala.Option.foreach(Option.scala:407)
+	at 	at loader.KafkaManagerLoader.load(KafkaManagerLoader.scala:27)
+	at 	at play.core.server.ProdServerStart$.start(ProdServerStart.scala:51)
+	at 	at play.core.server.ProdServerStart$.main(ProdServerStart.scala:25)
+	at 	at play.core.server.ProdServerStart.main(ProdServerStart.scala)
+16:11:16,778 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+16:11:16,778 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+16:11:16,778 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+16:11:16,779 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.classic.AsyncAppender]
+16:11:16,779 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [ASYNCFILE]
+16:11:16,779 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE] to ch.qos.logback.classic.AsyncAppender[ASYNCFILE]
+16:11:16,779 |-INFO in ch.qos.logback.classic.AsyncAppender[ASYNCFILE] - Attaching appender named [FILE] to AsyncAppender.
+16:11:16,779 |-INFO in ch.qos.logback.classic.AsyncAppender[ASYNCFILE] - Setting discardingThreshold to 51
+16:11:16,779 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.classic.AsyncAppender]
+16:11:16,779 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [ASYNCSTDOUT]
+16:11:16,779 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to ch.qos.logback.classic.AsyncAppender[ASYNCSTDOUT]
+16:11:16,779 |-INFO in ch.qos.logback.classic.AsyncAppender[ASYNCSTDOUT] - Attaching appender named [STDOUT] to AsyncAppender.
+16:11:16,779 |-INFO in ch.qos.logback.classic.AsyncAppender[ASYNCSTDOUT] - Setting discardingThreshold to 51
+16:11:16,779 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [play] to INFO
+16:11:16,779 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@45a37759 - Propagating INFO level on Logger[play] onto the JUL framework
+16:11:16,779 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [application] to INFO
+16:11:16,779 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@45a37759 - Propagating INFO level on Logger[application] onto the JUL framework
+16:11:16,779 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [kafka.manager] to INFO
+16:11:16,779 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@45a37759 - Propagating INFO level on Logger[kafka.manager] onto the JUL framework
+16:11:16,780 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.avaje.ebean.config.PropertyMapLoader] to OFF
+16:11:16,780 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@45a37759 - Propagating OFF level on Logger[com.avaje.ebean.config.PropertyMapLoader] onto the JUL framework
+16:11:16,780 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.avaje.ebeaninternal.server.core.XmlConfigLoader] to OFF
+16:11:16,780 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@45a37759 - Propagating OFF level on Logger[com.avaje.ebeaninternal.server.core.XmlConfigLoader] onto the JUL framework
+16:11:16,780 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.avaje.ebeaninternal.server.lib.BackgroundThread] to OFF
+16:11:16,780 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@45a37759 - Propagating OFF level on Logger[com.avaje.ebeaninternal.server.lib.BackgroundThread] onto the JUL framework
+16:11:16,780 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.gargoylesoftware.htmlunit.javascript] to OFF
+16:11:16,780 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@45a37759 - Propagating OFF level on Logger[com.gargoylesoftware.htmlunit.javascript] onto the JUL framework
+16:11:16,780 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.apache.zookeeper] to INFO
+16:11:16,780 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@45a37759 - Propagating INFO level on Logger[org.apache.zookeeper] onto the JUL framework
+16:11:16,780 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to WARN
+16:11:16,780 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@45a37759 - Propagating WARN level on Logger[ROOT] onto the JUL framework
+16:11:16,780 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [ASYNCFILE] to Logger[ROOT]
+16:11:16,780 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [ASYNCSTDOUT] to Logger[ROOT]
+16:11:16,780 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+16:11:16,780 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@63611043 - Registering current configuration as safe fallback point
+
+2023-09-11 16:11:17,595 - [WARN] application - application.conf @ file:/home/yknam/cmak-3.0.0.7/conf/application.conf: 12: play.crypto.secret is deprecated, use play.http.secret.key instead
+2023-09-11 16:11:17,753 - [INFO] k.m.a.KafkaManagerActor - Starting curator...
+2023-09-11 16:11:17,759 - [INFO] o.a.z.ZooKeeper - Client environment:zookeeper.version=3.5.7-f0fdd52973d373ffd9c86b81d99842dc2c7f660e, built on 02/10/2020 11:30 GMT
+2023-09-11 16:11:17,759 - [INFO] o.a.z.ZooKeeper - Client environment:host.name=winubuntu
+2023-09-11 16:11:17,759 - [INFO] o.a.z.ZooKeeper - Client environment:java.version=11.0.20.1
+2023-09-11 16:11:17,759 - [INFO] o.a.z.ZooKeeper - Client environment:java.vendor=Ubuntu
+2023-09-11 16:11:17,759 - [INFO] o.a.z.ZooKeeper - Client environment:java.home=/usr/lib/jvm/java-11-openjdk-amd64
+2023-09-11 16:11:17,759 - [INFO] o.a.z.ZooKeeper - Client environment:java.class.path=/home/yknam/cmak-3.0.0.7/lib/../conf/:/home/yknam/cmak-3.0.0.7/lib/cmak.cmak-3.0.0.7-sans-externalized.jar:/home/yknam/cmak-3.0.0.7/lib/org.apache.commons.commons-lang3-3.6.jar:/home/yknam/cmak-3.0.0.7/lib/org.apache.kafka.kafka-clients-2.4.1.jar:/home/yknam/cmak-3.0.0.7/lib/javax.inject.javax.inject-1.jar:/home/yknam/cmak-3.0.0.7/lib/com.fasterxml.jackson.core.jackson-core-2.10.0.jar:/home/yknam/cmak-3.0.0.7/lib/com.fasterxml.jackson.datatype.jackson-datatype-jsr310-2.8.11.jar:/home/yknam/cmak-3.0.0.7/lib/org.scalaz.scalaz-core_2.12-7.2.27.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.play.play_2.12-2.6.21.jar:/home/yknam/cmak-3.0.0.7/lib/io.netty.netty-codec-4.1.45.Final.jar:/home/yknam/cmak-3.0.0.7/lib/com.yammer.metrics.metrics-core-2.2.0.jar:/home/yknam/cmak-3.0.0.7/lib/com.fasterxml.jackson.datatype.jackson-datatype-jdk8-2.10.0.jar:/home/yknam/cmak-3.0.0.7/lib/org.webjars.requirejs-2.3.5.jar:/home/yknam/cmak-3.0.0.7/lib/org.apache.curator.curator-client-2.12.0.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.play.play-functional_2.12-2.6.12.jar:/home/yknam/cmak-3.0.0.7/lib/commons-codec.commons-codec-1.11.jar:/home/yknam/cmak-3.0.0.7/lib/com.beachape.enumeratum-macros_2.12-1.5.9.jar:/home/yknam/cmak-3.0.0.7/lib/javax.transaction.jta-1.1.jar:/home/yknam/cmak-3.0.0.7/lib/io.netty.netty-transport-4.1.45.Final.jar:/home/yknam/cmak-3.0.0.7/lib/org.webjars.popper.js-1.14.3.jar:/home/yknam/cmak-3.0.0.7/lib/org.json4s.json4s-scalap_2.12-3.6.5.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.play.play-server_2.12-2.6.21.jar:/home/yknam/cmak-3.0.0.7/lib/org.apache.kafka.connect-json-2.2.0.jar:/home/yknam/cmak-3.0.0.7/lib/org.slf4j.jul-to-slf4j-1.7.25.jar:/home/yknam/cmak-3.0.0.7/lib/org.typelevel.macro-compat_2.12-1.1.1.jar:/home/yknam/cmak-3.0.0.7/lib/org.reactivestreams.reactive-streams-1.0.2.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.play.filters-helpers_2.12-2.6.21.jar:/home/yknam/cmak-3.0.0.7/lib/com.fasterxml.jackson.core.jackson-annotations-2.10.0.jar:/home/yknam/cmak-3.0.0.7/lib/ch.qos.logback.logback-classic-1.2.3.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.play.play-streams_2.12-2.6.21.jar:/home/yknam/cmak-3.0.0.7/lib/org.rocksdb.rocksdbjni-5.15.10.jar:/home/yknam/cmak-3.0.0.7/lib/org.webjars.webjars-play_2.12-2.6.3.jar:/home/yknam/cmak-3.0.0.7/lib/javax.activation.javax.activation-api-1.2.0.jar:/home/yknam/cmak-3.0.0.7/lib/com.google.code.findbugs.jsr305-3.0.2.jar:/home/yknam/cmak-3.0.0.7/lib/org.slf4j.jcl-over-slf4j-1.7.25.jar:/home/yknam/cmak-3.0.0.7/lib/joda-time.joda-time-2.9.9.jar:/home/yknam/cmak-3.0.0.7/lib/io.netty.netty-transport-native-epoll-4.1.45.Final.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.play.build-link-2.6.21.jar:/home/yknam/cmak-3.0.0.7/lib/com.github.luben.zstd-jni-1.4.3-1.jar:/home/yknam/cmak-3.0.0.7/lib/org.apache.curator.curator-recipes-2.12.0.jar:/home/yknam/cmak-3.0.0.7/lib/org.scala-lang.modules.scala-parser-combinators_2.12-1.1.1.jar:/home/yknam/cmak-3.0.0.7/lib/io.netty.netty-buffer-4.1.45.Final.jar:/home/yknam/cmak-3.0.0.7/lib/org.lz4.lz4-java-1.6.0.jar:/home/yknam/cmak-3.0.0.7/lib/org.json4s.json4s-scalaz_2.12-3.6.5.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.play.play-logback_2.12-2.6.21.jar:/home/yknam/cmak-3.0.0.7/lib/org.apache.kafka.kafka-streams-2.2.0.jar:/home/yknam/cmak-3.0.0.7/lib/com.google.guava.guava-23.6.1-jre.jar:/home/yknam/cmak-3.0.0.7/lib/io.netty.netty-transport-native-unix-common-4.1.45.Final.jar:/home/yknam/cmak-3.0.0.7/lib/org.scala-lang.scala-reflect-2.12.10.jar:/home/yknam/cmak-3.0.0.7/lib/org.webjars.bootstrap-4.3.1.jar:/home/yknam/cmak-3.0.0.7/lib/io.netty.netty-common-4.1.45.Final.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.akka.akka-slf4j_2.12-2.5.19.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.play.play-json_2.12-2.6.12.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.play.play-netty-utils-2.6.21.jar:/home/yknam/cmak-3.0.0.7/lib/io.netty.netty-resolver-4.1.45.Final.jar:/home/yknam/cmak-3.0.0.7/lib/com.google.j2objc.j2objc-annotations-1.1.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.akka.akka-http-core_2.12-10.0.15.jar:/home/yknam/cmak-3.0.0.7/lib/org.webjars.json-20121008-1.jar:/home/yknam/cmak-3.0.0.7/lib/org.json4s.json4s-ast_2.12-3.6.5.jar:/home/yknam/cmak-3.0.0.7/lib/com.beachape.enumeratum_2.12-1.5.13.jar:/home/yknam/cmak-3.0.0.7/lib/org.clapper.grizzled-slf4j_2.12-1.3.3.jar:/home/yknam/cmak-3.0.0.7/lib/io.netty.netty-handler-4.1.45.Final.jar:/home/yknam/cmak-3.0.0.7/lib/org.scala-lang.modules.scala-collection-compat_2.12-2.1.2.jar:/home/yknam/cmak-3.0.0.7/lib/com.google.errorprone.error_prone_annotations-2.1.3.jar:/home/yknam/cmak-3.0.0.7/lib/org.webjars.dustjs-linkedin-2.7.2.jar:/home/yknam/cmak-3.0.0.7/lib/com.fasterxml.jackson.module.jackson-module-scala_2.12-2.10.0.jar:/home/yknam/cmak-3.0.0.7/lib/commons-cli.commons-cli-1.4.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.play.play-exceptions-2.6.21.jar:/home/yknam/cmak-3.0.0.7/lib/com.github.ben-manes.caffeine.caffeine-2.6.2.jar:/home/yknam/cmak-3.0.0.7/lib/org.webjars.octicons-4.3.0.jar:/home/yknam/cmak-3.0.0.7/lib/com.fasterxml.jackson.dataformat.jackson-dataformat-csv-2.10.0.jar:/home/yknam/cmak-3.0.0.7/lib/org.webjars.underscorejs-1.9.0.jar:/home/yknam/cmak-3.0.0.7/lib/com.adrianhurt.play-bootstrap-core_2.12-1.4-P26.jar:/home/yknam/cmak-3.0.0.7/lib/org.codehaus.mojo.animal-sniffer-annotations-1.14.jar:/home/yknam/cmak-3.0.0.7/lib/org.xerial.snappy.snappy-java-1.1.7.3.jar:/home/yknam/cmak-3.0.0.7/lib/com.fasterxml.jackson.module.jackson-module-paranamer-2.10.0.jar:/home/yknam/cmak-3.0.0.7/lib/org.checkerframework.checker-compat-qual-2.0.0.jar:/home/yknam/cmak-3.0.0.7/lib/org.apache.kafka.connect-api-2.2.0.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.akka.akka-protobuf_2.12-2.5.19.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.play.twirl-api_2.12-1.3.15.jar:/home/yknam/cmak-3.0.0.7/lib/org.apache.yetus.audience-annotations-0.5.0.jar:/home/yknam/cmak-3.0.0.7/lib/org.slf4j.slf4j-api-1.7.28.jar:/home/yknam/cmak-3.0.0.7/lib/org.apache.zookeeper.zookeeper-3.5.7.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.config-1.3.3.jar:/home/yknam/cmak-3.0.0.7/lib/org.apache.zookeeper.zookeeper-jute-3.5.7.jar:/home/yknam/cmak-3.0.0.7/lib/org.slf4j.log4j-over-slf4j-1.7.25.jar:/home/yknam/cmak-3.0.0.7/lib/org.scala-lang.modules.scala-xml_2.12-1.0.6.jar:/home/yknam/cmak-3.0.0.7/lib/org.json4s.json4s-core_2.12-3.6.5.jar:/home/yknam/cmak-3.0.0.7/lib/org.apache.commons.commons-compress-1.9.jar:/home/yknam/cmak-3.0.0.7/lib/org.webjars.jquery-3.5.1.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.ssl-config-core_2.12-0.3.6.jar:/home/yknam/cmak-3.0.0.7/lib/org.apache.curator.curator-framework-2.12.0.jar:/home/yknam/cmak-3.0.0.7/lib/org.apache.kafka.kafka_2.12-2.4.1.jar:/home/yknam/cmak-3.0.0.7/lib/org.webjars.webjars-locator-0.32-1.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.akka.akka-stream_2.12-2.5.19.jar:/home/yknam/cmak-3.0.0.7/lib/org.scala-lang.modules.scala-java8-compat_2.12-0.9.0.jar:/home/yknam/cmak-3.0.0.7/lib/com.thoughtworks.paranamer.paranamer-2.8.jar:/home/yknam/cmak-3.0.0.7/lib/org.json4s.json4s-jackson_2.12-3.6.5.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.akka.akka-parsing_2.12-10.0.15.jar:/home/yknam/cmak-3.0.0.7/lib/javax.xml.bind.jaxb-api-2.3.1.jar:/home/yknam/cmak-3.0.0.7/lib/org.webjars.backbonejs-1.3.3.jar:/home/yknam/cmak-3.0.0.7/lib/net.sf.jopt-simple.jopt-simple-5.0.4.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.scala-logging.scala-logging_2.12-3.9.2.jar:/home/yknam/cmak-3.0.0.7/lib/com.adrianhurt.play-bootstrap_2.12-1.4-P26-B4.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.play.play-akka-http-server_2.12-2.6.21.jar:/home/yknam/cmak-3.0.0.7/lib/com.unboundid.unboundid-ldapsdk-4.0.9.jar:/home/yknam/cmak-3.0.0.7/lib/ch.qos.logback.logback-core-1.2.3.jar:/home/yknam/cmak-3.0.0.7/lib/org.webjars.webjars-locator-core-0.35.jar:/home/yknam/cmak-3.0.0.7/lib/io.jsonwebtoken.jjwt-0.7.0.jar:/home/yknam/cmak-3.0.0.7/lib/org.scala-lang.scala-library-2.12.10.jar:/home/yknam/cmak-3.0.0.7/lib/com.typesafe.akka.akka-actor_2.12-2.5.19.jar:/home/yknam/cmak-3.0.0.7/lib/com.fasterxml.jackson.core.jackson-databind-2.10.0.jar:/home/yknam/cmak-3.0.0.7/lib/cmak.cmak-3.0.0.7-assets.jar
+2023-09-11 16:11:17,759 - [INFO] o.a.z.ZooKeeper - Client environment:java.library.path=/usr/local/hadoop/lib/native:/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2023-09-11 16:11:17,759 - [INFO] o.a.z.ZooKeeper - Client environment:java.io.tmpdir=/tmp
+2023-09-11 16:11:17,759 - [INFO] o.a.z.ZooKeeper - Client environment:java.compiler=<NA>
+2023-09-11 16:11:17,759 - [INFO] o.a.z.ZooKeeper - Client environment:os.name=Linux
+2023-09-11 16:11:17,759 - [INFO] o.a.z.ZooKeeper - Client environment:os.arch=amd64
+2023-09-11 16:11:17,759 - [INFO] o.a.z.ZooKeeper - Client environment:os.version=5.19.0-46-generic
+2023-09-11 16:11:17,759 - [INFO] o.a.z.ZooKeeper - Client environment:user.name=yknam
+2023-09-11 16:11:17,759 - [INFO] o.a.z.ZooKeeper - Client environment:user.home=/home/yknam
+2023-09-11 16:11:17,759 - [INFO] o.a.z.ZooKeeper - Client environment:user.dir=/home/yknam/cmak-3.0.0.7
+2023-09-11 16:11:17,759 - [INFO] o.a.z.ZooKeeper - Client environment:os.memory.free=477MB
+2023-09-11 16:11:17,759 - [INFO] o.a.z.ZooKeeper - Client environment:os.memory.max=7966MB
+2023-09-11 16:11:17,759 - [INFO] o.a.z.ZooKeeper - Client environment:os.memory.total=502MB
+2023-09-11 16:11:17,761 - [INFO] o.a.z.ZooKeeper - Initiating client connection, connectString=winubuntu:2181,namubuntu:2181 sessionTimeout=60000 watcher=org.apache.curator.ConnectionState@149d0795
+2023-09-11 16:11:17,763 - [INFO] o.a.z.c.X509Util - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2023-09-11 16:11:17,766 - [INFO] o.a.z.ClientCnxnSocket - jute.maxbuffer value is 4194304 Bytes
+2023-09-11 16:11:17,769 - [INFO] o.a.z.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=
+2023-09-11 16:11:17,772 - [INFO] o.a.z.ClientCnxn - Opening socket connection to server winubuntu/192.168.0.16:2181. Will not attempt to authenticate using SASL (unknown error)
+2023-09-11 16:11:17,774 - [INFO] k.m.a.KafkaManagerActor - zk=winubuntu:2181,namubuntu:2181
+2023-09-11 16:11:17,774 - [INFO] k.m.a.KafkaManagerActor - baseZkPath=/kafka-manager
+2023-09-11 16:11:17,776 - [INFO] o.a.z.ClientCnxn - Socket connection established, initiating session, client: /192.168.0.16:33184, server: winubuntu/192.168.0.16:2181
+2023-09-11 16:11:17,785 - [INFO] o.a.z.ClientCnxn - Session establishment complete on server winubuntu/192.168.0.16:2181, sessionid = 0x1015366da410003, negotiated timeout = 60000
+2023-09-11 16:11:17,834 - [INFO] k.m.a.DeleteClusterActor - Started actor akka://kafka-manager-system/user/kafka-manager/delete-cluster
+2023-09-11 16:11:17,834 - [INFO] k.m.a.KafkaManagerActor - Started actor akka://kafka-manager-system/user/kafka-manager
+2023-09-11 16:11:17,835 - [INFO] k.m.a.KafkaManagerActor - Starting delete clusters path cache...
+2023-09-11 16:11:17,835 - [INFO] k.m.a.DeleteClusterActor - Starting delete clusters path cache...
+2023-09-11 16:11:17,842 - [INFO] k.m.a.DeleteClusterActor - Adding kafka manager path cache listener...
+2023-09-11 16:11:17,843 - [INFO] k.m.a.KafkaManagerActor - Starting kafka manager path cache...
+2023-09-11 16:11:17,843 - [INFO] k.m.a.DeleteClusterActor - Scheduling updater for 10 seconds
+2023-09-11 16:11:17,850 - [INFO] k.m.a.KafkaManagerActor - Adding kafka manager path cache listener...
+2023-09-11 16:11:17,958 - [INFO] play.api.Play - Application started (Prod)
+Oops, cannot start the server.
+akka.stream.impl.io.ConnectionSourceStage$$anon$1$$anon$2: Bind failed because of java.net.BindException: 주소가 이미 사용 중입니다
+Caused by: java.net.BindException: 주소가 이미 사용 중입니다
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:459)
+	at java.base/sun.nio.ch.Net.bind(Net.java:448)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at akka.io.TcpListener.liftedTree1$1(TcpListener.scala:55)
+	at akka.io.TcpListener.<init>(TcpListener.scala:52)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at akka.util.Reflect$.instantiate(Reflect.scala:66)
+	at akka.actor.ArgsReflectConstructor.produce(IndirectActorProducer.scala:96)
+	at akka.actor.Props.newActor(Props.scala:212)
+	at akka.actor.ActorCell.newActor(ActorCell.scala:624)
+	at akka.actor.ActorCell.create(ActorCell.scala:650)
+	at akka.actor.ActorCell.invokeAll$1(ActorCell.scala:523)
+	at akka.actor.ActorCell.systemInvoke(ActorCell.scala:545)
+	at akka.dispatch.Mailbox.processAllSystemMessages(Mailbox.scala:283)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:235)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2023-09-11 16:11:18,307 - [ERROR] a.i.TcpListener - Bind failed for TCP channel on endpoint [/0.0.0.0:9994]
+java.net.BindException: 주소가 이미 사용 중입니다
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:459)
+	at java.base/sun.nio.ch.Net.bind(Net.java:448)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at akka.io.TcpListener.liftedTree1$1(TcpListener.scala:55)
+	at akka.io.TcpListener.<init>(TcpListener.scala:52)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
