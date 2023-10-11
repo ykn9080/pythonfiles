@@ -1,9 +1,10 @@
+#!/bin/python3
+
 from pyspark.sql import SparkSession
 from pyspark.sql.types import Row
 import json
 
-if __name__ == "__main__":
-    
+def basic():
     spark=SparkSession.builder.appName("Basic").master("local[*]").getOrCreate()
     
     datalist = [Row(id=1, name="ykn", city='seoul'), Row(
@@ -17,3 +18,10 @@ if __name__ == "__main__":
     print(json.dumps(message).encode("utf-8"))
     df.show()
     spark.stop()
+
+    return json.dumps(message).encode("utf-8")
+
+    
+if __name__ == "__main__":
+
+    basic()

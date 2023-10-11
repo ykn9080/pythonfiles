@@ -11,6 +11,7 @@ DEVICE_PROFILES = {
     "losang": {'temp': (63.9, 11.7), 'humd': (62.8, 21.8), 'pres': (1015.9, 11.3)},
 }
 
+
 if len(argv) != 2 or argv[1] not in DEVICE_PROFILES.keys():
     print("pls provide a valid device name:")
     for key in DEVICE_PROFILES.keys():
