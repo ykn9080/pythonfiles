@@ -3,11 +3,9 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.types import *
 from pyspark.sql.functions import *
-# import sys
-# sys.setrecursionlimit(10**7)
 
 
-def sparksql():
+def sparkDataframe():
     spark = SparkSession \
         .builder \
         .appName("movie_python") \
@@ -51,17 +49,6 @@ def sparksql():
     join_df.select('title', 'rating').orderBy(
         col("rating").desc()).show(5, False)
 
-    print("\n------------create tempview and sql-------------------\n")
-    movie_df.createOrReplaceTempView("movie")
-    ratings_df.createOrReplaceTempView("rating")
-    spark.sql("""
-        select title,rating from movie a join rating b
-              on a.movieId=b.movieId
-    """).show(5, False)
-    print("\n------------table list-------------------\n")
-    (spark.sql('show tables from default').show())
-    spark.stop()
-
 
 if __name__ == "__main__":
-    sparksql()
+    sparkDataframe()
