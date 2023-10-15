@@ -29,6 +29,7 @@ data = [("James", "Smith", "USA", "CA"),
 schema = ["firstname", "lastname", "country", "state"]
 df = spark.createDataFrame(data=data, schema=schema)
 df.show(truncate=False)
+
 print("\n------------ Broadcast join ------------------------------------------\n")
 joinDF = df.rdd.map(lambda x: (
     x[0], x[1], x[2], broadcastStates.value[x[3]])).toDF(schema)
