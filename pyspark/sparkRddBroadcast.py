@@ -13,7 +13,7 @@ spark = SparkSession.builder \
     .master("spark://winubuntu:7077") \
     .config(conf=conf) \
     .getOrCreate()
-
+spark.sparkContext.setLogLevel("ERROR")
 
 print("\n------------ Broadcast변수 생성 ------------------------------------------\n")
 states = {"NY": "New York", "CA": "California", "FL": "Florida"}

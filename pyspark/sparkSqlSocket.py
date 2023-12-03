@@ -13,7 +13,7 @@ def sparksql():
         .appName("movie_python") \
         .master("local[*]") \
         .getOrCreate()
-
+    spark.sparkContext.setLogLevel("ERROR")
     schema = StructType([
         StructField("movieId", IntegerType(), nullable=True),
         StructField("title", StringType(), nullable=True),

@@ -11,9 +11,9 @@ def sparksql():
     spark = SparkSession \
         .builder \
         .appName("movie_python") \
-        .master("local[*]") \
+        .master("local[1]") \
         .getOrCreate()
-
+    spark.sparkContext.setLogLevel("ERROR")
     schema = StructType([
         StructField("movieId", IntegerType(), nullable=True),
         StructField("title", StringType(), nullable=True),
@@ -23,7 +23,7 @@ def sparksql():
     movie_df = spark.read\
         .option("header", "true")\
         .csv(movie_data_path, schema)
-    print("\n------------movie dataframe schema-------------------------\n")
+    print("\n------------dataframe schema-------------------------\n")
     movie_df.printSchema()
 
     print("\n------------sort by title-----------------------------\n")

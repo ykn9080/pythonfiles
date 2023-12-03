@@ -12,16 +12,18 @@ spark = SparkSession.builder \
     .appName("accumulatorTest") \
     .master("spark://winubuntu:7077") \
     .getOrCreate()
-
+spark.sparkContext.setLogLevel("ERROR")
 
 print("\n------------ Accumulator 변수 생성 ------------------------------------------\n")
 file = spark.sparkContext.textFile("/data/wordSample.txt")
+print("accum = spark.sparkContext.accumulator(0)")
 accum = spark.sparkContext.accumulator(0)
 
 print("\n------------ Accumulator 합계 ------------------------------------------\n")
 # arr = file.flatMap(lambda x:  x.split(" ") if x != "" else blankLines.add(1))
 
 words = file.flatMap(lambda x: x.split(" "))
-print("word flatMap list: ", words.collect())
+print("word flatMap list: ")
+print(words.collect())
 words.foreach(lambda x: accum.add(1))
 print("accumulator sum: ", accum.value)

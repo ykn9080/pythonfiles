@@ -9,26 +9,25 @@ from pyspark.streaming import StreamingContext
 if __name__ == "__main__":
     spark = SparkSession \
         .builder\
-        .appName("StreamFile")\
+        .appName("Nginxlog")\
         .master("local[2]")\
         .getOrCreate()
 
     spark.sparkContext.setLogLevel("ERROR")
 
     schema = StructType()\
-        .add("Date", TimestampType(), True)\
-        .add("Message", StringType(), True)
+        .add("value", StringType(), True)
 
     streamDF = spark\
         .readStream\
-        .option("delimiter", "|")\
         .schema(schema)\
-        .csv("file:///home/yknam/pythonfiles/pyspark/data/")
+        .text("/data/sparktest")
+        # .text("file:///var/log/nginx/access.log")
 
-    streamDF.createOrReplaceTempView("stream")
-    outDF = spark.sql("select * from stream")
-    print("-------show tables from default-----------")
-    print(spark.sql('show tables from default').show())
+    streamDF.createOrReplaceTempView("nginxlog")
+    outDF = spark.sql("select * from nginxlog")
+    # print(outDF.show(truncate=False))
+    # print(spark.sql('show tables from default').show())
     query = outDF\
         .writeStream\
         .outputMode("update")\
@@ -36,4 +35,4 @@ if __name__ == "__main__":
         .start()
 
     ssc = StreamingContext(spark.sparkContext, 1)
-    ssc.awaitTerminationOrTimeout(1)
+    ssc.awaitTerminationOrTimeout(100)
